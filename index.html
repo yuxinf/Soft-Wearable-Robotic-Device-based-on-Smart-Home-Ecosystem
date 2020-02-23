@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html> 
+	<head>
+		<title>Columbia University EECS E4764 IoT Project Report #21</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
+							<h1 id="title">Soft Wearable Robotic Device Based on Smart Home Ecosystem</h1>
+							<p>Columbia University <br>
+								EECS E4764 Fall'18 Internet of Things<br>
+								Soft Wearable Robotic Device Based on Smart Home Ecosystem<br>
+								Team 21 Project Report
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
+								<li><a href="#motivation" id="motivation-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Motivation</span></a></li>
+								<li><a href="#system" id="system-link" class="skel-layers-ignoreHref"><span class="icon fa-th">System</span></a></li>
+								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
+								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
+								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/chevalierfff?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/xWX6hiL-JSw" frameborder="0" allowfullscreen></iframe>
+	
+								<h2 class="alt">Soft Wearable Robotic Device Based on Smart Home Ecosystem</h2>
+								<p>Existing Soft Wearable Robotic Devices (Exoskeleton) mostly focus on structure design and force control. These devices work under certain circumstances and are unsuitable to take home for daily use. To extend the application fields, we take IoT technologies into consideration. Our project based on the Exoskeleton, which improves the mobility of patients with lower-limb paralysis. We designed and developed a module to help the Exoskeleton fuse into smart home ecosystem. Our module contains three major functions: computer vision system, inertial measurement sensors (IMU) system and patient-centered speech recognition control. Computer vision system detects the current environment to choose the most appropriate control policy. IMU system processes the data to calculate the knee angle and torque supplied for real-time monitoring. The patient-centered speech recognition control helps to tackle with emergency conditions and improve patients' emotional stability and social-integration.</p>
+								
+
+							<footer>
+								<a href="#motivation" class="button scrolly">Motivation</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="motivation" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Motivation</h2>
+							</header>
+
+							<p align="left">In the last two decades, Exoskeletons have been heralded as one type of promising assistive device for performance augmentation of healthy individuals and medical rehabilitations of patients with disabilities, however most of these Exoskeletons are designed to be used in hospitals or rehabilitation centers. In order to truly improve the mobility of patients with lower limb paralysis in their daily lives, our team decided to modify an Exoskeleton prototype and develop a module to enable it to fuse into smart home ecosystem with advanced IoT technologies.</p>
+              <a href="#" class="image fit"><img src="images/exos.jpg" alt="" /></a>
+              <br>
+              <p align="center"><b><i>Exoskeletons prototype preview</i></b></p>
+
+
+						</div>
+					</section>
+					
+					
+					<section id="system" class="three">
+						<div class="container">
+							<header>
+								<h2>System</h2>
+							</header>
+							
+							<p align="left">The system comprises three main elements: camera module, IMU system. and speech recognition control. For the camera module, it pipelines the photo to the google cloud server. Based on these photos, we apply a pre-trained neural network to help us classify different environmental conditions. The system will choose the most appropriate control policy based on that result. The second one is IMUs system. We put a IMU on our thigh and shank. Each IMU send the data to a microcontroller. The microcontroller will process these data to calculate the knee angle.  Based on knee angle, we can find out the torque required exoskeleton to provided for patient. In additional, The doctor and patient family can monitor the data through the APP. The third function is the patient-centered speech recognition control. We interfaced with APIs to enable to patients to send tweets from our device via speech recognition. By sharing the real-time status on twitter, patients can inform their family, doctors, and friends in time in case any emergency happens. </p>
+							
+							<h3 align="left">Architecture</h3>
+              <article class="item">
+							  <a href="#" class="image fit"><img src="images/ARC.JPG" alt="" /></a>
+
+							<p align="left"></p>
+							
+							
+							<h3 align="left">Technical Components</h3>
+
+							<p align="left" style="font-size:70%;">Arducam Mini Module Camera Shield with OV2640 2 Megapixels Lens
+              <br>Arducam ESP8266 UNO Board
+              <br>Arduino Due
+              <br>Inertial Measurement Sensors
+              <br>Exoskeleton Prototype
+              <br>Google Cloud Platform
+              <br>Android Smartphone Application</p>
+
+							
+							<h3 align="left">Prototype</h3>
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/CVKit.JPG" alt="" width="500" /></a>
+										<header>
+											<h3>Computer vision kit</h3>
+											
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/exopic.PNG" alt="" width="500" height="350"/></a>
+										<header>
+											<h3>Exoskeleton integrated with IoT module</h3>
+											
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/app.PNG" alt="" width="500" height="350"/></a>
+										<header>
+											<h3>Android smartphone application</h3>
+											
+										</header>
+									</article>
+								</div>
+							</div>
+							
+							
+							
+						</div>
+					</section>
+					
+					
+					<section id="results" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Results</h2>
+							</header>
+
+							<p align="left">Our module could distinguish stair environment and non-stair environment successfully. We trained our model on the dataset (MCIndoor20000) with 16000 pictures and got the accuracy about 98% in test. The detection result could be reflected by the detection light (red for stairs, green for non-stairs) on app. Our app could also show the knee angle, torque and their variation in real-time for the essential monitoring. The doctor or family members could monitor the condition of exoskeleton and give the necessary help. The speech recognition system could send twitter about the emotion of patients and emergence call successfully. The goals from bronze to gold are all completed.</p>
+              
+              <article class="item">
+                <a href="#" class="image fit"><img src="images/StairsandNonstairs.gif" alt="" /></a>               
+								<header>
+									<h3>Environment Detection using Computer Vision</h3>
+								</header>
+							</article>
+							<br>
+              
+              <article class="item">
+                <a href="#" class="image fit"><img src="images/app.gif" alt="" /></a>           
+								<header>
+									<h3>Speech Recognition Control using Smart Phone APP</h3>
+								</header>
+							</article>
+							
+							
+						</div>
+					</section>
+					
+					<section id="references" class="three">
+						<div class="container">
+
+							<header>
+								<h2>References</h2>
+							</header>
+
+
+							<p align="left" style="font-size:80%;">[1] Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+                                                        
+              <br>[2] Fan, Yuan Jie, et al. "IoT-based smart rehabilitation system." IEEE transactions on industrial informatics 10.2 (2014): 1568-1577.
+              <br>[3] Yang, Jianfu, et al. "Machine Learning Based Adaptive Gait Phase Estimation Using Inertial Measurement Sensors."
+              <br>[4] Yu, Zhiding, Chen Feng, Ming-Yu Liu, and Srikumar Ramalingam. "CASENet: Deep Category-Aware Semantic Edge Detection." May 27, 2017.
+              </p>
+
+						</div>
+					</section>
+					
+
+				<!-- About Me -->
+					<section id="team" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Our Team</h2>
+							</header>
+
+							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/wendaxu.jpg" alt="" /></a>
+										<header>
+											<h3>Wenda Xu</h3>
+											<p>Mechanical Engineering graduate from Columbia University with specialization in Robotics and Artificial Intelligence
+                      <br>LinkedIn Profile: <a href="https://www.linkedin.com/in/wenda-xu/">Wenda Xu</a></p>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/yuxin.jpg" alt="" /></a>
+										<header>
+											<h3>Yuxin Fu</h3>
+											<p>Mechanical Engineering graduate from Columbia University with specialization in Robotics, Product Design and Development</p>
+                      <br>LinkedIn Profile: <a href="https://www.linkedin.com/in/yuxin-fu/">Yuxin Fu</a></p>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/Jianghao.jpg" alt="" /></a>
+										<header>
+											<h3>Jianghao Ou</h3>
+											<p>Mechanical Engineering graduate from Columbia University with specialization in Robotics
+                        <br>LinkedIn Profile: <a href="www.linkedin.com/in/jianghao-ou">Jianghao Ou</a></p>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p align="left">
+								<strong>Wenda Xu: </strong>wx2195@columbia.edu</br>
+								<strong>Yuxin Fu: </strong>f.yuxin@columbia.edu</br>
+                <strong>Jianghao Ou: </strong>jo2526@columbia.edu</br>
+								<strong>Other Contact Information: </strong><a href="https://twitter.com/chevalierfff?lang=en" class="icon fa-twitter"><span class="label">Twitter</span></a></br>
+							</br>
+								<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
+								<!-- <strong>Class Website:</strong>
+									<a href="https://edblogs.columbia.edu/eecs4764-001-2018-3/">Columbia University EECS E4764 Fall '18 IoT</a></br> -->
+								<strong>Instructor:</strong> <a href="http://fredjiang.com/">Professsor Xiaofan (Fred) Jiang</a>
+							</p>
+							
+
+							<!-- <form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form> -->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
